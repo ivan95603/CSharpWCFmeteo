@@ -25,7 +25,7 @@ namespace cSharpVezba9V2Client
         private void btnSend_Click(object sender, EventArgs e)
         {
             JavniServis.JavniServisClient servis = new JavniServis.JavniServisClient();
-            textBox1.Text = servis.ProsecneTemperature(textNazivStanice.Text, dateTimePicker1.Value, dateTimePicker2.Value).ToString();
+            textBox1.Text = servis.ProsecneTemperatureAsync(textNazivStanice.Text, dateTimePicker1.Value, dateTimePicker2.Value).ToString();
 
         }
     }

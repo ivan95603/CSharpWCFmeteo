@@ -11,10 +11,10 @@ namespace cSharpVezba9V2
         
 
         private string stanica;
-        private int vrednost;
+        private double vrednost;
         private DateTime vreme;
 
-        public Merenje(string stanica, int vrednost, DateTime vreme)
+        public Merenje(string stanica, double vrednost, DateTime vreme)
         {
             if (stanica == null) throw new ArgumentNullException(nameof(stanica));
             this.stanica = stanica;
@@ -28,7 +28,7 @@ namespace cSharpVezba9V2
             set { stanica = value; }
         }
 
-        public int Vrednost
+        public double Vrednost
         {
             get { return vrednost; }
             set { vrednost = value; }

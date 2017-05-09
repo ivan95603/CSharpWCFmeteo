@@ -17,7 +17,7 @@ namespace cSharpVezba9V2
         public interface ISistemServis
         {
             [OperationContract]
-            bool Temperatura(string stanica, int vrednost, DateTime vreme);
+            bool Temperatura(string stanica, double vrednost, DateTime vreme);
         }
 
 
@@ -31,7 +31,7 @@ namespace cSharpVezba9V2
 
         public class SistemServis : ISistemServis
         {
-            public bool Temperatura(string stanica, int vrednost, DateTime vreme)
+            public bool Temperatura(string stanica, double vrednost, DateTime vreme)
             {
                 try
                 {

@@ -16,10 +16,10 @@ namespace cSharpVezba9V2MernaStanica.SistemServis {
     public interface ISistemServis {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISistemServis/Temperatura", ReplyAction="http://tempuri.org/ISistemServis/TemperaturaResponse")]
-        bool Temperatura(string stanica, int vrednost, System.DateTime vreme);
+        bool Temperatura(string stanica, double vrednost, System.DateTime vreme);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISistemServis/Temperatura", ReplyAction="http://tempuri.org/ISistemServis/TemperaturaResponse")]
-        System.Threading.Tasks.Task<bool> TemperaturaAsync(string stanica, int vrednost, System.DateTime vreme);
+        System.Threading.Tasks.Task<bool> TemperaturaAsync(string stanica, double vrednost, System.DateTime vreme);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,11 +49,11 @@ namespace cSharpVezba9V2MernaStanica.SistemServis {
                 base(binding, remoteAddress) {
         }
         
-        public bool Temperatura(string stanica, int vrednost, System.DateTime vreme) {
+        public bool Temperatura(string stanica, double vrednost, System.DateTime vreme) {
             return base.Channel.Temperatura(stanica, vrednost, vreme);
         }
         
-        public System.Threading.Tasks.Task<bool> TemperaturaAsync(string stanica, int vrednost, System.DateTime vreme) {
+        public System.Threading.Tasks.Task<bool> TemperaturaAsync(string stanica, double vrednost, System.DateTime vreme) {
             return base.Channel.TemperaturaAsync(stanica, vrednost, vreme);
         }
     }
