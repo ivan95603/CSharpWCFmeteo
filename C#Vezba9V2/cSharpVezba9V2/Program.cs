@@ -36,6 +36,7 @@ namespace cSharpVezba9V2
                 try
                 {
                     lista.Add(new Merenje(stanica, vrednost, vreme));
+                    Console.WriteLine(lista[lista.Count - 1]);
                     return true;
                 }
                 catch (Exception e)

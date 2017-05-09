@@ -25,7 +25,7 @@ namespace cSharpVezba9V2MernaStanica
         private void btnSend_Click(object sender, EventArgs e)
         {
             SistemServis.SistemServisClient servis = new SistemServis.SistemServisClient();
-            servis.TemperaturaAsync(textNazivStanice.Text, Convert.ToDouble(textTemperaturaStanice.Text), dateTimePicker1.Value);
+            servis.Temperatura(textNazivStanice.Text, Convert.ToDouble(textTemperaturaStanice.Text), dateTimePicker1.Value);
         }
     }
 }
