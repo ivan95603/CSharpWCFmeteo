@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace cSharpVezba9V2.SistemServis {
+namespace cSharpVezba9V2MernaStanica.SistemServis {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -23,12 +23,12 @@ namespace cSharpVezba9V2.SistemServis {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ISistemServisChannel : cSharpVezba9V2.SistemServis.ISistemServis, System.ServiceModel.IClientChannel {
+    public interface ISistemServisChannel : cSharpVezba9V2MernaStanica.SistemServis.ISistemServis, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SistemServisClient : System.ServiceModel.ClientBase<cSharpVezba9V2.SistemServis.ISistemServis>, cSharpVezba9V2.SistemServis.ISistemServis {
+    public partial class SistemServisClient : System.ServiceModel.ClientBase<cSharpVezba9V2MernaStanica.SistemServis.ISistemServis>, cSharpVezba9V2MernaStanica.SistemServis.ISistemServis {
         
         public SistemServisClient() {
         }

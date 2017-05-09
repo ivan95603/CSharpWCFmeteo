@@ -10,11 +10,14 @@ namespace cSharpVezba9V2
 {
     class Program
     {
+        public static List<Merenje> lista = new List<Merenje>();
+
+
         [ServiceContract]
         public interface ISistemServis
         {
             [OperationContract]
-            string Temperatura(string stanica, int vrednost, DateTime vreme);
+            bool Temperatura(string stanica, int vrednost, DateTime vreme);
         }
 
 
@@ -28,9 +31,18 @@ namespace cSharpVezba9V2
 
         public class SistemServis : ISistemServis
         {
-            public string Temperatura(string stanica, int vrednost, DateTime vreme)
+            public bool Temperatura(string stanica, int vrednost, DateTime vreme)
             {
-                return "TEMP";
+                try
+                {
+                    lista.Add(new Merenje(stanica, vrednost, vreme));
+                    return true;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    return false;
+                }
             }
         }
 
@@ -38,7 +50,18 @@ namespace cSharpVezba9V2
         {
             public double ProsecneTemperature(string stanica, DateTime pocetak, DateTime kraj)
             {
-                return 3.14;
+                int number = 0;
+                double suma = 0;
+                foreach (var i in lista)
+                {
+                    if ((i.Stanica == stanica) && (i.Vreme >= pocetak) && (i.Vreme <= kraj))
+                    {
+                        suma += i.Vrednost;
+                        number++;
+                    }
+                }
+
+                return suma / number;
             }
         }
 

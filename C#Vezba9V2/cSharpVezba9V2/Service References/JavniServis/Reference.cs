@@ -16,10 +16,10 @@ namespace cSharpVezba9V2.JavniServis {
     public interface IJavniServis {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJavniServis/ProsecneTemperature", ReplyAction="http://tempuri.org/IJavniServis/ProsecneTemperatureResponse")]
-        double ProsecneTemperature();
+        double ProsecneTemperature(string stanica, System.DateTime pocetak, System.DateTime kraj);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IJavniServis/ProsecneTemperature", ReplyAction="http://tempuri.org/IJavniServis/ProsecneTemperatureResponse")]
-        System.Threading.Tasks.Task<double> ProsecneTemperatureAsync();
+        System.Threading.Tasks.Task<double> ProsecneTemperatureAsync(string stanica, System.DateTime pocetak, System.DateTime kraj);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +49,12 @@ namespace cSharpVezba9V2.JavniServis {
                 base(binding, remoteAddress) {
         }
         
-        public double ProsecneTemperature() {
-            return base.Channel.ProsecneTemperature();
+        public double ProsecneTemperature(string stanica, System.DateTime pocetak, System.DateTime kraj) {
+            return base.Channel.ProsecneTemperature(stanica, pocetak, kraj);
         }
         
-        public System.Threading.Tasks.Task<double> ProsecneTemperatureAsync() {
-            return base.Channel.ProsecneTemperatureAsync();
+        public System.Threading.Tasks.Task<double> ProsecneTemperatureAsync(string stanica, System.DateTime pocetak, System.DateTime kraj) {
+            return base.Channel.ProsecneTemperatureAsync(stanica, pocetak, kraj);
         }
     }
 }
